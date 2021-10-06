@@ -35,19 +35,19 @@ header{
 }
 
 header .btn {
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 /* nav  */
 
 nav{
   width: 200px;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 60px);
   background-color: black;
   position: fixed;
-  left: 0;
   color: wheat;
   z-index: 999;
+  
 }
 
 nav .container-nav{
@@ -56,14 +56,98 @@ nav .container-nav{
 }
 
 nav .container-nav img{
-  width: 80%;
+  width: 80% 0;
   margin: 10px 0;
 }
 
+nav .container-nav ul {
+  margin-bottom: 20px;
+  list-style-type: none;
+}
+
+nav .container-nav ul li {
+  margin-bottom: 12px;
+}
+
+nav .container-nav ul li:first-child a {
+  color: white;
+}
+
+nav .container-nav ul li a {
+ font-weight: bold;
+ font-size: 12px;
+}
+
 nav .container-nav ul li img{
+  width: 25px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+nav .container-nav ul li i{
+  vertical-align: middle;
+  margin-left: 2px;
+  margin-right: 3px;
+  font-size: 25px;
+}
+
+nav .container-nav ul li h5{
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+}
+
+.primo-ul li:nth-child(2) i{
+  color: gray;
+}
+
+.primo-ul li:nth-child(2) a,.primo-ul li:nth-child(3) a{
+  color: gray;
+}
+
+.secondo-ul li {
+  color: gray;
+  font-weight: bold;
+}
+
+.secondo-ul li span {
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.secondo-ul li i{
+  background-color: gray;
+  color: black;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.nav-bottom{
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+
+.nav-bottom .row:first-child{
+  border-bottom:1px solid gray ;
+}
+
+.nav-bottom .row img{
   width: 20px;
   vertical-align: middle;
-  
+}
+
+.nav-bottom .row span{
+ font-size: 12px;
+ font-weight: bold;
+ cursor: pointer;
+ color: gray;
+}
+
+.nav-bottom .row:last-child img{
+ background-color: gray ;
+ width: 17px;
+ border-radius: 50%;
 }
 
 /* main  */
@@ -71,15 +155,52 @@ nav .container-nav ul li img{
 main{
   padding-top:60px ;
   padding-left: 200px;
-  /* background-color: #141922; */
+  height: calc(100vh - 60px);
+  overflow: auto;
+  background-color: #141922; 
 }
 
+.container-main{
+  margin:20px 10px ;
+}
+
+main ul {
+  text-align: center;
+}
+
+main ul li{
+  display: inline-block;
+  margin: 5px;
+}
+
+main ul li .underline{
+  border: 2px solid greenyellow;
+  width: 50%;
+  margin: 0 auto;
+  display: none;
+}
+
+main ul li:hover .underline{
+  display: block;
+}
+
+main ul li a{
+  color: gray;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+main .container-main h2{
+  font-weight: bold;
+  color: white;
+}
 /* footer */
 
 footer{
   position: fixed;
   bottom: 0;
-  height: 100px;
+  height: 60px;
   width: 100%;
   background-color: aqua;
   z-index: 999;
