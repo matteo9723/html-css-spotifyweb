@@ -155,13 +155,15 @@ nav .container-nav ul li h5{
 }
 
 .nav-bottom{
-  width: 100%;
-  position: relative;
+  position: absolute;
   bottom: 0;
+  background-color: black;
+  width: 80%;
 }
 
 .nav-bottom .row:first-child{
   border-bottom:1px solid gray ;
+  width: 150px;
 }
 
 .nav-bottom .row img{
@@ -501,7 +503,7 @@ footer .box.tre .barra:hover .ascoltato{
 @media screen and (max-width:575px){
   nav{
     width: 50px;
-    
+    min-height: 300px;
   }
 
   nav .container-nav{
