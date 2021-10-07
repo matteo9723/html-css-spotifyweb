@@ -20,6 +20,11 @@ a {
   text-decoration: none;
 }
 
+.clearfix::after{
+  content: "";
+  display: table;
+  clear: both;
+}
 /* header  */
 
 header{
@@ -166,6 +171,10 @@ main{
   width: 100%;
 }
 
+main .container-main .row{
+  margin-bottom: 30px;
+}
+
 main ul {
   text-align: center;
 }
@@ -175,15 +184,11 @@ main ul li{
   margin: 5px;
 }
 
-main ul li .underline{
+main ul li:first-child .underline{
   border: 2px solid greenyellow;
   width: 50%;
   margin: 0 auto;
-  display: none;
-}
-
-main ul li:hover .underline{
-  display: block;
+  
 }
 
 main ul li a{
@@ -201,30 +206,69 @@ main .container-main h2{
 }
 
 main .container-main .item{
-  display: inline-block;
   width: 13%;
   text-align: center;
   float: left;
   margin:0 1% ;
-  
+}
+
+main .container-main .item .image{
+  position: relative;
+}
+
+main .container-main .item .image i{
+  display: none;
+}
+
+main .container-main .item:hover .image i{
+  display: block;
+  position: absolute;
+  top: 50% ;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: white;
+  z-index: 999;
+  font-size: 5vw;
+}
+
+main .container-main .item:hover .image .overlay{
+ width: 100%;
+ height: 98%;
+ background-color: rgba(0, 0, 0, .5);
+ position: absolute;
 }
 
 main .container-main .item img{
   width: 100%;
+  height: 100%;
 }
 
-main .container-main .item img:hover{
-  filter: grayscale(100%);
-}
 
 main .container-main .item h4{
   color: white;
   padding: 10px 0 5px 0;
 }
 
-main .container-main .item h5{
+main .container-main .row h5{
   color: gray;
 }
+
+main .container-main .row.due h5,main .container-main .row.tre h5{
+  margin-left: 1%;
+  margin-bottom: 20px;
+}
+
+main .container-main .row.tre .image img{
+  border-radius: 50%;
+}
+
+main .container-main .row.tre .item:hover .image .overlay{
+  width: 100%;
+  height: 98%;
+  background-color: rgba(0, 0, 0, .5);
+  position: absolute;
+  border-radius: 50%;
+ }
 /* footer */
 
 footer{
@@ -234,4 +278,52 @@ footer{
   width: 100%;
   background-color: aqua;
   z-index: 999;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .box.uno,footer .box.tre {
+  height: 60px;
+  width: 300px;
+  background-color: red;
+  border: 1px solid black;
+}
+
+footer .box.due {
+  height: 60px;
+  width: 100%;
+  background-color: red;
+  border: 1px solid black;
+}
+
+/* box uno  */
+
+footer .box.uno {
+  display: flex;
+  align-items: center;
+}
+
+footer .box.uno img{
+  width: 20%;
+  margin: 0 5px;
+}
+
+footer .box.uno .subtitle{
+  margin-right: 20px;
+}
+
+footer .box.uno .subtitle h5{
+  color: white;
+}
+
+footer .box.uno .subtitle h6{
+  color: gray;
+}
+
+footer .box.uno i{
+  padding-right: 10px;
+}
+
+footer .box.uno i:hover{
+  color: white;
 }
