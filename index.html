@@ -21,10 +21,12 @@
 
   <nav>
     <div class="container-nav">
-
-      <img src="img/logo.svg" alt="">
+      <div class="logo">
+        <img src="img/logo.svg" alt="">
+      </div>  
 
       <ul class="primo-ul">
+        
         <li><img src="img/home.svg" alt=""><a href="#">Home</a></li>
         <li><i class="fas fa-search"></i><a href="#">Cerca</a></li>
         <li><img src="img/libreria.svg" alt=""><a href="#">La tua libreria</a></li>
@@ -67,10 +69,10 @@
     </ul>
 
     <div class="container-main">
-
+      
+      <h2>Recently Played</h2>
       <div class="row uno clearfix">
 
-        <h2>Recently Played</h2>
 
         <div class="item">
           <div class="image">
@@ -141,7 +143,9 @@
         </div>
 
       </div>  
+    </div>
 
+    <div class="container-main">
       <div class="row due clearfix">
         <h2>Creato per john doe</h2>
         <h5>Più ascolti più accurati saranno i suggerimenti</h5>
@@ -168,7 +172,9 @@
           </div>
         </div>
       </div>
+    </div>  
 
+    <div class="container-main">
       <div class="row tre clearfix">
         <h2>Artisti più popolari</h2>
         <h5>Più ascolti più accurati saranno i suggerimenti</h5>
@@ -193,8 +199,9 @@
           </div>
         </div>
       </div>
+    </div>  
     
-    </div>
+    
   </main>
 
   <footer>
@@ -204,12 +211,41 @@
         <h5>sinister</h5>
         <h6>brano nome</h6>
       </div>
-      <i class="far fa-heart"></i>
-      <i class="far fa-folder"></i>
-
+      <class class="item">
+        <i class="far fa-heart"></i>
+        <i class="far fa-folder"></i>
+      </class>
     </div>
-    <div class="box due"></div>
-    <div class="box tre"></div>
+
+    <div class="box due">
+      <div class="top">
+        <i class="fas fa-random"></i>
+        <i class="fas fa-step-backward"></i>
+        <i class="far fa-play-circle"></i>
+        <i class="fas fa-step-forward"></i>
+        <i class="fas fa-redo-alt"></i>
+      </div>
+      <div class="bottom">
+        <span>0.25</span>
+        <div class="barra">
+          <div class="ascoltato">
+            <div class="cursore"></div>
+          </div>
+        </div>
+        <span>3.14</span>
+      </div>
+    </div>
+
+    <div class="box tre">
+      <i class="fas fa-list"></i>
+      <i class="fas fa-tv"></i>
+      <i class="fas fa-volume-up"></i>
+      <div class="barra">
+        <div class="ascoltato">
+          <div class="cursore"></div>
+        </div>
+      </div>
+    </div>
   </footer> 
 </body>
 </html>

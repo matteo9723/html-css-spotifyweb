@@ -17,6 +17,7 @@
 }
 
 .btn:hover{
+  transition: 1s;
   transform: scale(1.1);
 }
 
@@ -54,9 +55,7 @@ nav{
   height: calc(100vh - 60px);
   background-color: black;
   position: fixed;
-  color: wheat;
   z-index: 999;
-  
 }
 
 nav .container-nav{
@@ -110,6 +109,22 @@ nav .container-nav ul li h5{
   color: gray;
 }
 
+.primo-ul li:nth-child(2):hover i,.primo-ul li:nth-child(2):hover a{
+  color: white;
+}
+
+.primo-ul li:nth-child(3):hover a{
+  color: white;
+}
+
+.primo-ul li:nth-child(3) img{
+  opacity: .8;
+ }
+
+.primo-ul li:nth-child(3):hover img{
+ opacity: 1;
+}
+
 .primo-ul li:nth-child(2) a,.primo-ul li:nth-child(3) a{
   color: gray;
 }
@@ -117,6 +132,10 @@ nav .container-nav ul li h5{
 .secondo-ul li {
   color: gray;
   font-weight: bold;
+}
+
+.secondo-ul li:hover {
+  color: white;
 }
 
 .secondo-ul li span {
@@ -129,6 +148,10 @@ nav .container-nav ul li h5{
   color: black;
   padding: 5px;
   cursor: pointer;
+}
+
+.secondo-ul li:hover i{
+  background-color: white;
 }
 
 .nav-bottom{
@@ -151,6 +174,10 @@ nav .container-nav ul li h5{
  font-weight: bold;
  cursor: pointer;
  color: gray;
+}
+
+.nav-bottom .row span:hover{
+ color: white;
 }
 
 .nav-bottom .row:last-child img{
@@ -206,17 +233,26 @@ main ul li a{
   font-size: 12px;
 }
 
+main ul li:hover a{
+  color: white;
+}
+
 main .container-main h2{
   font-weight: bold;
   color: white;
   margin-bottom: 20px;
   margin-left: 1%;
+  width: 100%;
+}
+
+.container-main .row{
+  display: flex;
+  flex-wrap: wrap;
 }
 
 main .container-main .item{
   width: 13%;
   text-align: center;
-  float: left;
   margin:0 1% ;
 }
 
@@ -255,10 +291,13 @@ main .container-main .item img{
 main .container-main .item h4{
   color: white;
   padding: 10px 0 5px 0;
+  font-size: 11px;
 }
 
 main .container-main .row h5{
   color: gray;
+  font-size: 10px;
+  width: 100%;
 }
 
 main .container-main .row.due h5,main .container-main .row.tre h5{
@@ -309,6 +348,10 @@ footer .box.uno {
   align-items: center;
 }
 
+footer .box.uno .item{
+  display: flex;
+} 
+
 footer .box.uno img{
   width: 20%;
   margin: 0 5px;
@@ -329,6 +372,7 @@ footer .box.uno .subtitle h6{
 footer .box.uno i{
   padding-right: 10px;
   color: gray;
+  cursor: pointer;
 }
 
 footer .box.uno i:hover{
@@ -350,10 +394,12 @@ footer .box.due .top,footer .box.due .bottom{
 footer .box.due .top i{
  color: white;
  padding: 0 10px;
+ cursor: pointer;
 }
 
 footer .box.due .top .far.fa-play-circle:hover{
  transform: scale(1.5);
+ transition: 2s;
 }
 
 footer .box.due .barra{
@@ -361,15 +407,30 @@ footer .box.due .barra{
   border: 2px solid gray;
   border-radius:10px ;
   position: relative;
+  cursor: pointer;
 }
 
 footer .box.due .barra .ascoltato{
   width: 30%;
-  border: 2px solid greenyellow;
+  border: 2px solid #C8C8C8;
   border-radius:10px ;
   position: absolute;
   top: -2px;
   left: -1px;
+}
+
+footer .box.due .barra .ascoltato:hover .cursore{
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #C8C8C8;
+  position: absolute;
+  right: -10px;
+  transform: translate(-50%,-50%);
+ }
+
+footer .box.due .barra:hover .ascoltato{
+  border: 2px solid greenyellow;
 }
 
 footer .box.due span{
@@ -379,7 +440,7 @@ footer .box.due span{
  margin: 0 5px;
 }
 
-/* boc tre */
+/* box tre */
 footer .box.tre{
   display: flex;
   align-items: center;
@@ -390,6 +451,7 @@ footer .box.tre i{
   font-size: 12px;
   padding: 0 8px;
   color: white;
+  cursor: pointer;
 }
 
 footer .box.tre .barra{
@@ -398,13 +460,123 @@ footer .box.tre .barra{
   border-radius:10px ;
   position: relative;
   margin-right: 5px;
+  cursor: pointer;
 }
 
 footer .box.tre .barra .ascoltato{
   width: 30%;
-  border: 2px solid greenyellow;
+  border: 2px solid #C8C8C8;
   border-radius:10px ;
   position: absolute;
   top: -2px;
   left: -1px;
+}
+
+footer .box.tre .barra .ascoltato:hover .cursore{
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #C8C8C8;
+  position: absolute;
+  right: -10px;
+  transform: translate(-50%,-50%);
+ }
+
+footer .box.tre .barra:hover .ascoltato{
+  border: 2px solid greenyellow;
+}
+
+@media screen and (max-width:991px){
+  main .container-main .item{
+      width: 23%;
+  }
+}
+
+@media screen and (max-width:767px){
+  main .container-main .item{
+      width: 45%;
+  }
+}
+
+@media screen and (max-width:575px){
+  nav{
+    width: 50px;
+    
+  }
+
+  nav .container-nav{
+    width: 100% ;
+  }
+
+
+  nav .logo{
+    content: url('../img/logo-small.svg');
+    width: 25px;
+    margin: 0 auto;
+  }
+
+  nav .logo img{
+    display: none;
+  }
+
+  nav a {
+    display: none;
+  }
+
+  nav .container-nav .primo-ul {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav .container-nav .secondo-ul {
+    display: none;
+  }
+
+  nav .container-nav .nav-bottom {
+    bottom: 0px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  nav .container-nav .nav-bottom .row {
+    display: flex;
+    justify-content: center;
+    border-bottom: none;
+    width: 100%;
+  }
+
+  nav .container-nav .nav-bottom .row img {
+    width: 20px;
+  }
+
+  nav .container-nav .nav-bottom .row:first-child img {
+    margin-left: -3px;
+  }
+
+  nav .container-nav .nav-bottom span{
+    display: none;
+  }
+
+ 
+
+  main{
+    padding-left: 50px;
+  }
+
+  header{
+    width: calc(100% - 50px);
+  }
+
+  footer .box.uno .item{
+    flex-wrap: wrap;
+  } 
+
+  footer .box.uno .subtitle {
+    margin-right: 0px;
+  }
+
 }
